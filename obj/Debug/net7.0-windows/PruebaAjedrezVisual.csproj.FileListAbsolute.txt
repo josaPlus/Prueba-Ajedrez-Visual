@@ -1,0 +1,15 @@
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.csproj.AssemblyReference.cache
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.AssemblyInfoInputs.cache
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.AssemblyInfo.cs
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.csproj.CoreCompileInputs.cache
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\bin\Debug\net7.0-windows\PruebaAjedrezVisual.exe
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\bin\Debug\net7.0-windows\PruebaAjedrezVisual.deps.json
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\bin\Debug\net7.0-windows\PruebaAjedrezVisual.runtimeconfig.json
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\bin\Debug\net7.0-windows\PruebaAjedrezVisual.dll
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\bin\Debug\net7.0-windows\PruebaAjedrezVisual.pdb
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.dll
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\refint\PruebaAjedrezVisual.dll
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.pdb
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\PruebaAjedrezVisual.genruntimeconfig.cache
+C:\Users\josaf\Desktop\PruebaAjedrezVisual\obj\Debug\net7.0-windows\ref\PruebaAjedrezVisual.dll
