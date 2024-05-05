@@ -30,6 +30,10 @@ public Dama(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(
         }
         return false;
     }
+    public override string ObtenerRutaImagen()
+    {
+        throw new NotImplementedException();
+    }
 
     public override string toString()
     {

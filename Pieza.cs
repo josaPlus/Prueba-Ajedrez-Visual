@@ -5,37 +5,33 @@ interface ComerPieza
 
 public abstract class Pieza
 {
-    public ColoresPieza color;
+    
+    private ColoresPieza _color;
     public TipoPieza tipo;
 
     // constructor
     public Pieza(ColoresPieza color,TipoPieza tipo)
     {   
-        this.color = color;
+        this._color = color;
         this.tipo = tipo;
-    }  
-
-    public ColoresPieza color { get; set; }
-
-    public ColoresPieza getColor()
-    {
-        return this.color;
-    }
+    }   
+    public ColoresPieza Color { get { return _color; } set { _color = value; } }
 
     public ColoresPieza ObtenerColor()
     {
-        return this.color;
+        return this._color;
     }
 
     public ColoresPieza getColor() 
     {
-        return color;
+        return _color;
     }
-
     public TipoPieza getTipo() 
     {
         return tipo;
     }
+
+    public abstract string ObtenerRutaImagen();
 
     public abstract String toString();
 

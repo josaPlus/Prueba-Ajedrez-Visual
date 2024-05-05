@@ -40,17 +40,17 @@ public class Torre : Pieza, ComerPieza
         return "t";
     }
 
-    public string ObtenerRutaImagen()
-{
-    if (this.getColor() == ColoresPieza.NEGRO)
+    public override string ObtenerRutaImagen()
     {
-        return "C:/Users/josaf/Downloads/torreNegro.png";
+        if (this.getColor() == ColoresPieza.NEGRO)
+        {
+            return "C:/Users/josaf/Downloads/torreNegro.png";
+        }
+        else
+        {
+            return "C:/Users/josaf/Downloads/torreBlanco.png";
+        }
     }
-    else
-    {
-        return "C:/Users/josaf/Downloads/torreBlanco.png";
-    }
-}
 
     public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
     {

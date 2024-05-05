@@ -35,6 +35,18 @@ public class Alfil : Pieza, ComerPieza
         return false;
     }
 
+    public override string ObtenerRutaImagen()
+    {
+        if (this.getColor() == ColoresPieza.NEGRO)
+        {
+            return "C:/Users/josaf/Downloads/AlfilNegro.png";
+        }
+        else
+        {
+            return "C:/Users/josaf/Downloads/AlfilBlanco.png";
+        }
+    }
+
     public override string toString()
     {
         return "a";

@@ -31,6 +31,11 @@ public Caballo(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPie
         return false;
     }
 
+    public override string ObtenerRutaImagen()
+    {
+        throw new NotImplementedException();
+    }
+
     public override string toString()
     {
         return "c";

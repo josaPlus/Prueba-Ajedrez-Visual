@@ -1,9 +1,13 @@
 public class Peon : Pieza, ComerPieza
 {
-public Peon(ColoresPieza color) : base(color, TipoPieza.PEON) 
-{
+    public Peon(ColoresPieza color) : base(color, TipoPieza.PEON) 
+    {
 
-}
+    }
+    public override string ObtenerRutaImagen()
+    {
+        throw new NotImplementedException();
+    }
     public override string toString()
     {
         return "p";

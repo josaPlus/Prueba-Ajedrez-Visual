@@ -1,7 +1,7 @@
 
 public class Tablero
 {
-    public Pieza[,] tablero;
+    public Pieza?[,] tablero;
     private Panel[,] casillas;
     private Form form;
 
@@ -74,33 +74,35 @@ public class Tablero
             for (int columna = 0; columna < 8; columna++)
             {
                 casillas[fila, columna] = new Panel();
-                casillas[fila, columna].Size = new Size(50, 50);
-                casillas[fila, columna].Location = new Point(columna * 50 + 200, fila * 50 + 20); // Mover 200 píxeles a la derecha y 20 para abajo
+                casillas[fila, columna].Size = new Size(100, 100);
+                casillas[fila, columna].Location = new Point(columna * 100 + 150, fila * 100); // Mover 200 píxeles a la derecha y 20 para abajo
                 casillas[fila, columna].BackColor = (fila + columna) % 2 == 0 ? Color.White : Color.Brown;
     
                 // Crear un botón y asignarle la imagen correspondiente a la pieza
                 Button boton = new Button();
-                boton.Size = new Size(50, 50);
+                boton.Size = new Size(100, 100);
                 Pieza pieza = tablero[fila, columna];
-                if (pieza != null)
+                switch (pieza)
                 {
-                    if (pieza is Torre)
-                    {
-                        boton.Image = Image.FromFile(pieza.ObtenerRutaImagen());
-                    }
-                    else
-                    {
-                        boton.Text = " " + pieza.GetType().Name[0]
-                            + Enum.GetName(typeof(ColoresPieza), pieza.color)[0] + " "; // Pieza en la casilla
-                    }
+                    case Torre torre:
+                        boton.Image = Image.FromFile(torre.ObtenerRutaImagen());
+                        break;
+                    case Alfil alfil:
+                        boton.Image = Image.FromFile(alfil.ObtenerRutaImagen());
+                        break;
+                    // Puedes agregar más casos aquí para otras piezas
+                    default:
+                        break;
                 }
     
-                // Agregar el botón al panel
+                // Agregar el botón de torres al panel
                 casillas[fila, columna].Controls.Add(boton);
     
                 // Agregar el panel a form.Controls después de agregar el botón
                 form.Controls.Add(casillas[fila, columna]);
             }
         }
+
+        
     }
 }

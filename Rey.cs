@@ -15,7 +15,7 @@ public class Rey : Pieza, ComerPieza
             throw new ArgumentException("Color no válido");
         }
     }
-public Rey(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(color), TipoPieza.REY) { }
+    public Rey(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(color), TipoPieza.REY) { }
     public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
     {
         int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
@@ -29,7 +29,10 @@ public Rey(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(c
         }
         return false;
     }
-
+    public override string ObtenerRutaImagen()
+    {
+        throw new NotImplementedException();
+    }
     public override string toString()
     {
         return "r";
