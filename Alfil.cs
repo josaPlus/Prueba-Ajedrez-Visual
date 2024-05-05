@@ -39,7 +39,7 @@ public class Alfil : Pieza, ComerPieza
     {
         if (this.getColor() == ColoresPieza.NEGRO)
         {
-            return "C:/Users/josaf/Downloads/AlfilNegro.png";
+            return "Imagenes/AlfilNegro.png";
         }
         else
         {
