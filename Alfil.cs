@@ -43,7 +43,7 @@ public class Alfil : Pieza, ComerPieza
         }
         else
         {
-            return "C:/Users/josaf/Downloads/AlfilBlanco.png";
+            return "Imagenes/AlfilBlanco.png";
         }
     }
 
