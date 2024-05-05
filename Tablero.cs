@@ -90,7 +90,18 @@ public class Tablero
                     case Alfil alfil:
                         boton.Image = Image.FromFile(alfil.ObtenerRutaImagen());
                         break;
-                    // Puedes agregar más casos aquí para otras piezas
+                    case Caballo caballo:
+                        boton.Image = Image.FromFile(caballo.ObtenerRutaImagen());
+                        break;
+                    case Dama dama:
+                        boton.Image = Image.FromFile(dama.ObtenerRutaImagen());
+                        break;
+                    case Rey rey:
+                        boton.Image = Image.FromFile(rey.ObtenerRutaImagen());
+                        break;
+                    case Peon peon:
+                        boton.Image = Image.FromFile(peon.ObtenerRutaImagen());
+                        break;
                     default:
                         break;
                 }

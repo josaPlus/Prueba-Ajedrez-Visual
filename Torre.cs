@@ -44,11 +44,11 @@ public class Torre : Pieza, ComerPieza
     {
         if (this.getColor() == ColoresPieza.NEGRO)
         {
-            return "C:/Users/josaf/Downloads/torreNegro.png";
+            return "Imagenes/TorreNegro.png";
         }
         else
         {
-            return "C:/Users/josaf/Downloads/torreBlanco.png";
+            return "Imagenes/TorreBlanco.png";
         }
     }
 

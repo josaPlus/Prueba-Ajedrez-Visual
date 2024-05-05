@@ -32,7 +32,13 @@ public Dama(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(
     }
     public override string ObtenerRutaImagen()
     {
-        throw new NotImplementedException();
+        if (getColor() == ColoresPieza.NEGRO)
+        {
+            return "Imagenes/DamaNegro.png";
+        } else
+        {
+            return "Imagenes/DamaBlanco.png";
+        }
     }
 
     public override string toString()

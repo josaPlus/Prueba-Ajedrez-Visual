@@ -33,7 +33,13 @@ public Caballo(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPie
 
     public override string ObtenerRutaImagen()
     {
-        throw new NotImplementedException();
+        if (this.getColor() == ColoresPieza.NEGRO)
+        {
+            return "Imagenes/CaballoNegro.png";
+        } else
+        {
+            return "Imagenes/CaballoBlanco.png";
+        }
     }
 
     public override string toString()

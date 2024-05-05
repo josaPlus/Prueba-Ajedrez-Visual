@@ -31,7 +31,13 @@ public class Rey : Pieza, ComerPieza
     }
     public override string ObtenerRutaImagen()
     {
-        throw new NotImplementedException();
+        if (getColor() == ColoresPieza.NEGRO)
+        {
+            return "Imagenes/ReyNegro.png";
+        } else
+        {
+            return "Imagenes/ReyBlanco.png";
+        }
     }
     public override string toString()
     {

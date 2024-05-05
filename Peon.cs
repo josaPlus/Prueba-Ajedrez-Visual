@@ -6,7 +6,13 @@ public class Peon : Pieza, ComerPieza
     }
     public override string ObtenerRutaImagen()
     {
-        throw new NotImplementedException();
+        if (getColor() == ColoresPieza.NEGRO)
+        {
+            return "Imagenes/PeonNegro.png";
+        } else
+        {
+            return "Imagenes/PeonBlanco.png";
+        }
     }
     public override string toString()
     {
