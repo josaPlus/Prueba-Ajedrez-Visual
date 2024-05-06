@@ -1,4 +1,4 @@
-public class Dama : Pieza, ComerPieza
+public class Dama : Pieza
 {
     public static ColoresPieza ConvertirColorDrawingAColorPieza(System.Drawing.Color color)
 {
@@ -17,27 +17,20 @@ public class Dama : Pieza, ComerPieza
 }
 
 public Dama(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(color), TipoPieza.DAMA) { }
-    public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
-        int distanciaHorizontal = Math.Abs(columnaDestino - columnaOrigen);
 
-        if (distanciaVertical == distanciaHorizontal || 
-            (distanciaVertical == 0 && distanciaHorizontal != 0) || 
-            (distanciaVertical != 0 && distanciaHorizontal == 0))
-        {
-            return true;
-        }
+    public override bool movimientoValido(int filaDestino, int columnaDestin)
+    {
         return false;
     }
+
     public override string ObtenerRutaImagen()
     {
         if (getColor() == ColoresPieza.NEGRO)
         {
-            return "Imagenes/DamaNegro.png";
+            return "Imagenes/damaNegra.png";
         } else
         {
-            return "Imagenes/DamaBlanco.png";
+            return "Imagenes/damaBlanca.png";
         }
     }
 
@@ -46,8 +39,8 @@ public Dama(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(
         return "d";
     }
 
-    public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    // {
+    //     return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+    // }
 }

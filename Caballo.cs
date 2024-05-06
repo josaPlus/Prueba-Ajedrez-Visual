@@ -1,4 +1,4 @@
-public class Caballo : Pieza, ComerPieza
+public class Caballo : Pieza
 {
     public static ColoresPieza ConvertirColorDrawingAColorPieza(System.Drawing.Color color)
 {
@@ -19,26 +19,19 @@ public Caballo(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPie
 {
     
 }
-    public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    public override bool movimientoValido(int filaDestino, int columnaDestin)
     {
-        int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
-        int distanciaHorizontal = Math.Abs(columnaDestino - columnaOrigen);
-
-        if ((distanciaVertical == 2 && distanciaHorizontal == 1) || (distanciaVertical == 1 && distanciaHorizontal == 2))
-        {
-            return true;
-        }
-        return false;
+        throw new NotImplementedException();
     }
 
     public override string ObtenerRutaImagen()
     {
         if (this.getColor() == ColoresPieza.NEGRO)
         {
-            return "Imagenes/CaballoNegro.png";
+            return "Imagenes/caballoNegro.png";
         } else
         {
-            return "Imagenes/CaballoBlanco.png";
+            return "Imagenes/caballoBlanco.png";
         }
     }
 
@@ -47,8 +40,8 @@ public Caballo(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPie
         return "c";
     }
 
-    public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    // {
+    //     return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+    // }
 }

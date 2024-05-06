@@ -1,4 +1,4 @@
-public class Rey : Pieza, ComerPieza
+public class Rey : Pieza
 {
     public static ColoresPieza ConvertirColorDrawingAColorPieza(System.Drawing.Color color)
     {
@@ -16,27 +16,18 @@ public class Rey : Pieza, ComerPieza
         }
     }
     public Rey(System.Drawing.Color color) : base(ConvertirColorDrawingAColorPieza(color), TipoPieza.REY) { }
-    public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    public override bool movimientoValido(int filaDestino, int columnaDestin)
     {
-        int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
-        int distanciaHorizontal = Math.Abs(columnaDestino - columnaOrigen);
-
-        if ((distanciaVertical == 1 && distanciaHorizontal == 1) ||
-            (distanciaVertical == 1 && distanciaHorizontal == 0) ||
-            (distanciaVertical == 0 && distanciaHorizontal == 1))
-        {
-            return true;
-        }
-        return false;
+        throw new NotImplementedException();
     }
     public override string ObtenerRutaImagen()
     {
         if (getColor() == ColoresPieza.NEGRO)
         {
-            return "Imagenes/ReyNegro.png";
+            return "Imagenes/reyNegro.png";
         } else
         {
-            return "Imagenes/ReyBlanco.png";
+            return "Imagenes/reyBlanco.png";
         }
     }
     public override string toString()
@@ -44,8 +35,8 @@ public class Rey : Pieza, ComerPieza
         return "r";
     }
 
-    public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    // {
+    //     return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+    // }
 }

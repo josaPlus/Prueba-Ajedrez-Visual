@@ -21,6 +21,8 @@ public abstract class Pieza
     {
         return this._color;
     }
+    public Button Boton { get; set; }
+
 
     public ColoresPieza getColor() 
     {
@@ -35,10 +37,12 @@ public abstract class Pieza
 
     public abstract String toString();
 
-    public abstract bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino);
+    public int fila { get; set; }
+    public int columna { get; set; }
 
+    public abstract bool movimientoValido(int filaDestino, int columnaDestin);
 
-    public bool comerPieza(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comerPieza(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
+    //     return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+    // }
 }

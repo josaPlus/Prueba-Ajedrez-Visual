@@ -1,5 +1,5 @@
-public class Torre : Pieza, ComerPieza
-{    
+public class Torre : Pieza
+{
     public static ColoresPieza ConvertColorToColoresPieza(System.Drawing.Color color)
     {
         if (color == System.Drawing.Color.Black)
@@ -16,22 +16,14 @@ public class Torre : Pieza, ComerPieza
         }
     }
 
-    public Torre(System.Drawing.Color color) : base(ConvertColorToColoresPieza(color), TipoPieza.TORRE) 
+    public Torre(System.Drawing.Color color) : base(ConvertColorToColoresPieza(color), TipoPieza.TORRE)
     {
-        
+
     }
 
-    public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    public override bool movimientoValido(int filaDestino, int columnaDestin)
     {
-        int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
-        int distanciaHorizontal = Math.Abs(columnaDestino - columnaOrigen);
-
-        if ((distanciaVertical == 0 && distanciaHorizontal != 0) ||
-            (distanciaVertical != 0 && distanciaHorizontal == 0))
-        {
-            return true;
-        }
-        return false;
+        throw new NotImplementedException();
     }
 
 
@@ -44,16 +36,16 @@ public class Torre : Pieza, ComerPieza
     {
         if (this.getColor() == ColoresPieza.NEGRO)
         {
-            return "Imagenes/TorreNegro.png";
+            return "Imagenes/torreNegra.png";
         }
         else
         {
-            return "Imagenes/TorreBlanco.png";
+            return "Imagenes/torreBlanca.png";
         }
     }
 
-    public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    // {
+    //     return movimientoValido(filaDestino, columnaDestino);
+    // }
 }

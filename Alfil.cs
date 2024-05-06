@@ -1,5 +1,5 @@
 
-public class Alfil : Pieza, ComerPieza
+public class Alfil : Pieza
 {
 
     public static ColoresPieza ConvertColorToColoresPieza(System.Drawing.Color color)
@@ -23,27 +23,20 @@ public class Alfil : Pieza, ComerPieza
     
     }
 
-    public override bool movimientoValido(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    public override bool movimientoValido(int filaDestino, int columnaDestin)
     {
-        int distanciaVertical = Math.Abs(filaDestino - filaOrigen);
-        int distanciaHorizontal = Math.Abs(columnaDestino - columnaOrigen);
-
-        if (distanciaVertical == distanciaHorizontal)
-        {
-            return true;
-        }
-        return false;
+        throw new NotImplementedException();
     }
 
     public override string ObtenerRutaImagen()
     {
         if (this.getColor() == ColoresPieza.NEGRO)
         {
-            return "Imagenes/AlfilNegro.png";
+            return "Imagenes/alfilNegro.png";
         }
         else
         {
-            return "Imagenes/AlfilBlanco.png";
+            return "Imagenes/alfilBlanco.png";
         }
     }
 
@@ -52,8 +45,8 @@ public class Alfil : Pieza, ComerPieza
         return "a";
     }
 
-    public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
-    {
-        return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
-    }
+    // public bool comer(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino)
+    // {
+    //     return movimientoValido(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+    // }
 }
